@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        h1{
+            font-size: 60px;
+            justify-content: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        h2{
+            font-size: 30px;
+            justify-content: center;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        #estadoServidor{
+            font-style: oblique;
+            color: rgb(21, 75, 34);
+        }
+
+        #contenedorTabla{
+            width: 100%;
+            height: 70%;
+           padding-top: 3%; 
+           display: flex;
+           justify-content: center;
+        }
+
+        table{
+            text-align: center;
+            justify-content: center;
+            border-collapse: collapse;
+            width: 90%;
+            height: 90%;
+        }
+
+        th{
+            background-color: rgb(23, 44, 19);
+            height: 50px;
+        }
+
+        th {
+            border-bottom: 1px solid black;
+            font-size: 20px;
+            color: white;
+        }
+
+        td{
+            height: 10%;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2; /* Gris claro para filas impares */
+        }
+
+        tr:nth-child(even) {
+            background-color: #e6e6e6; /* Otro tono de gris para filas pares */
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <h1>Preparación</h1>
+    <h2>Estado del sistema: <span id="estadoServidor">Activo</span> </h2>
+    <div id="contenedorTabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tokens</th>
+                    <th>Dato 1</th>
+                    <th>Dato 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>092839081</td>
+                    <td>Ejemplo 1</td>
+                    <td>Ejemplo 2</td>
+                </tr>
+                <tr>
+                    <td>092839081</td>
+                    <td>Ejemplo 1</td>
+                    <td>Ejemplo 2</td>
+                </tr>
+                <tr>
+                    <td>092839081</td>
+                    <td>Ejemplo 1</td>
+                    <td>Ejemplo 2</td>
+                </tr>
+                <tr>
+                    <td>092839081</td>
+                    <td>Ejemplo 1</td>
+                    <td>Ejemplo 2</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+</body>
+</html>

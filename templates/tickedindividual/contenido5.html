@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+
+        h1{
+            font-size: 60px;
+            justify-content: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        h2{
+            font-size: 30px;
+            justify-content: center;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        #contenedorTabla{
+            width: 100%;
+            height: 70%;
+           padding-top: 3%; 
+           display: flex;
+           justify-content: center;
+        }
+
+        table{
+            text-align: center;
+            justify-content: center;
+            border-collapse: collapse;
+            width: 90%;
+            height: 90%;
+        }
+
+        th{
+            background-color:  rgb(91, 91, 72);
+            height: 50px;
+        }
+
+        th {
+            border-bottom: 1px solid black;
+            font-size: 20px;
+            color: white;
+        }
+
+        td{
+            height: 10%;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2; /* Gris claro para filas impares */
+        }
+
+        tr:nth-child(even) {
+            background-color: #e6e6e6; /* Otro tono de gris para filas pares */
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>Recuperacion</h1>
+    <h2>Historial de acciones...</h2>
+    <div id="contenedorTabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Estatus</th>
+                    <th>Ult.acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#9487371</td>
+                    <td>En proceso</td>
+                    <td>Recuperacion de...</td>
+                </tr>
+                <tr>
+                    <td>#9487371</td>
+                    <td>No empezado</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>#9487371</td>
+                    <td>En proceso</td>
+                    <td>Caso asignado al personal</td>
+                </tr>
+                <tr>
+                    <td>#9487371</td>
+                    <td>Terminado</td>
+                    <td>Caso asignado al personal</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+</body>
+</html>

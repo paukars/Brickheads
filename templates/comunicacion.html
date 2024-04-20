@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+      <div id="contendorMain">
+
+          <div class="contenedor">
+                <div id="navSup">
+                    <div class="punto"></div>
+                    <div class="punto"></div>
+                    <div class="punto"></div>
+                </div>
+              <div id="contenedorAsunto">
+                    <div id="contenedorAsuntoTexto">
+                        <p>Asunto</p>
+                    </div>
+                    <div id="relleno1">
+
+
+                    </div>
+              </div>
+              <div id="contenedorDestinatario">
+                    <div id="contenedorDestinarioTexto">
+                        <p>Destinatario</p>
+                    </div>
+                  <div id="relleno2">
+
+
+                    </div>
+              </div>
+              <div id="conteneroTextArea">
+                <textarea id="textArea1"></textarea>
+
+              </div>
+              <div id="contenedorPie">
+                  <div id="barraHerramientas">
+
+
+                </div>
+                <div id="contenedorBoton">
+                    <p>Enviar</p>
+                </div>
+              </div>
+
+          </div>
+
+        <div id="contenedor2">
+
+            <div id="cabezera2">
+                <p id="textoCebezera2">Notificaciones</p>
+            </div>
+
+            <div id="contenedorSMS">
+                <div    class="message"></div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+            function agregarCaja() {
+              const contenedor = document.getElementById('contenedorSMS');
+              const nuevaCaja = document.createElement('div');
+              nuevaCaja.classList.add('message');
+              //nuevaCaja.textContent = contenedor.children.length ; // Asigna el número de la caja
+              contenedor.appendChild(nuevaCaja);
+            }
+          </script>
+          <script>
+          let arrow = document.querySelectorAll(".arrow");
+          for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e)=>{
+           let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+           arrowParent.classList.toggle("showMenu");
+            });
+          }
+          let sidebar = document.querySelector(".sidebar");
+          let sidebarBtn = document.querySelector(".bx-menu");
+          console.log(sidebarBtn);
+          sidebarBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+          });
+    </script>
+
+{% endblock contenido %}

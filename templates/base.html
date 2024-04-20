@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal | www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar Menu </title>
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://assets.codepen.io/344846/style.css" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'css/navBar.css' %}">
+      <link rel="stylesheet" href="{% static 'css/dashBoard.css' %}">
+      <link rel="stylesheet" href="{% static 'css/comunicacion.css' %}">
+      <link rel="stylesheet" href="{% static 'css/ticket.css'%}">
+      <link rel="stylesheet" href="{% static 'css/dashboard2.css'%}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   </head>
+
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <a href="https://imgbb.com/"><img src="https://i.ibb.co/3ydQZJS/logo.png" alt="logo" border="0" /></a>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="{% url 'dashboard' %}">
+          <i class='bx bx-line-chart' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="{% url 'tickets' %}">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Security Incidents</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a class="link_name" href="#">Security Incidents</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="{% url 'comunicacion' %}">
+          <i class='bx bx-bell' ></i>
+          <span class="link_name">Notifications</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Notifications</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="{% url 'detalle_ticket' %}">
+          <i class='bx bx-bell' ></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+      
+    <div class="profile-details">
+      <i class="bx bx-user-circle" id="profile"></i>
+      <div class="name-job">
+        <div class="profile_name">Prem Shahi</div>
+        <div class="job">Web Desginer</div>
+      </div>
+      <i class='bx bx-log-out' id="log_out"></i>
+    </div>
+  </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text">SGIS</span>
+    </div>
+      {% block contenido %}{% endblock contenido %}
+  </section>
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>

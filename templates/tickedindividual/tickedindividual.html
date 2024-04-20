@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block contenido %}
+    
+  
+      <div id="contenedorMain">
+        
+        <div id="visible">
+            <div id="contenedorSeccionActual">
+
+            </div>
+        </div>
+
+        <div id="indice">
+            <div class="seccion" data-content="contenido1">
+                <p id="txtS1">Preparación</p>
+            </div>
+            <div class="seccion" data-content="contenido2">
+                <p id="txtS2">Identificación</p>
+            </div>
+            <div class="seccion" data-content="contenido3">
+                <p id="txtS3">Contención</p>
+            </div>
+            <div class="seccion" data-content="contenido4">
+                <p id="txtS4">Erradicación</p>
+            </div>
+            <div class="seccion" data-content="contenido5">
+                <p id="txtS5">Recuperación</p>   
+            </div>
+            <div class="seccion" data-content="contenido6">
+                <p id="txtS6">Retroalimentación</p>
+            </div>
+        </div>             
+           
+      </div>
+      
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const opciones = document.querySelectorAll('.seccion');
+            const contenido = document.getElementById('contenedorSeccionActual');
+
+            opciones.forEach(opcion => {
+                opcion.addEventListener('click', function () {
+                    const tipoContenido = this.getAttribute('data-content');
+                    cargarContenido(tipoContenido);
+                });
+            });
+
+            function cargarContenido(nombreArchivo) {
+                fetch(`${nombreArchivo}.html`)
+                    .then(response => response.text())
+                    .then(html => contenido.innerHTML = html)
+                    .catch(error => contenido.innerHTML = `<p>Error al cargar el contenido: ${error}</p>`);
+            }
+        });
+    </script>
+{% endblock contenido %}
+    

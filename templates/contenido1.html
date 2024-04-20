@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de eventos</title>
+    <style>
+      
+        #estadoServidor {
+            font-style: oblique;
+            color: rgb(21, 75, 34);
+        }
+
+        #contenedorTabla {
+            width: 100%; /* Ajusta el ancho del contenedor al ancho de la ventana */
+            max-height: 280px; /* Altura máxima del contenedor */
+            overflow-y: auto; /* Habilita la barra de desplazamiento vertical si el contenido excede la altura máxima */
+            display: flex;
+            justify-content: center;
+            margin-top: 3%;
+        }
+
+        table {
+            width: 90%; /* Anchura de la tabla, asegura un margen a los lados dentro del contenedor */
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: center; /* Alinea el texto de las celdas al centro */
+            
+            
+            padding: 8px; /* Espaciado interno para texto en th y td */
+        }
+
+        th {
+            background-color: rgb(61, 123, 123);
+            font-size: 20px;
+            color: white;
+            height: 50px; /* Altura fija para los encabezados de columna */
+        }
+
+        td {
+            height: 60px;
+            min-height: 70px; /* Altura mínima para las celdas de datos, asegura uniformidad */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2; /* Gris claro para filas impares */
+        }
+
+        tr:nth-child(even) {
+            background-color: #e6e6e6; /* Otro tono de gris para filas pares */
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedorTabla">
+        <table>
+                   <thead>
+                                <tr>
+                                    <th>Tipo de eventos</th>
+                                    <th>Numero de incidencias</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Staff Accessed Account</td>
+                                    <td>{{ staff_access_count }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Failed Staff Login Attempt</td>
+                                    <td>{{ staff_failed_login }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Failed User Login Attempt</td>
+                                    <td>{{ user_failed_login }}</td>
+                                </tr>
+                            </tbody>
+        </table>
+    </div>
+</body>
+</html>

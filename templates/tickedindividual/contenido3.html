@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        h1{
+            font-size: 60px;
+            justify-content: center;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        
+        h2{
+            font-size: 30px;
+            justify-content: center;
+            text-align: left;
+            padding-top: 40px;
+            padding-left: 80px;
+            border-bottom: 1px solid black;
+            width: 100%;
+            }
+
+        #info p{
+            font-size: 20px;
+            justify-content: center;
+            text-align: left;
+            padding-top: 30px;
+            padding-left: 80px;
+            width: 100%;
+        }
+
+        .contenedorInfo{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        #info{
+            width: 60%;
+        }
+
+        #contenedorFoto{
+            width: 40%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items:end;
+
+        }
+
+        #foto{
+            width: 85%;
+            height: 10%;    
+            box-shadow: 0px 0px 5px black;
+            display: flex;
+            justify-content: center;
+            align-items:end;
+            border-radius: 10px;
+            background-color: rgb(154, 154, 120);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+        
+        #foto:hover{
+            width: 90%;
+            height: 12%;
+        }
+
+        #descargar{
+            padding: 0px;
+            font-size: 30px;
+            text-align: center;
+            justify-content: center;
+            padding-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Contenido</h1>
+    <h2>Reporte de usuario</h2>
+
+    <div class="contenedorInfo">
+        <div id="info">
+            <p style="padding-top: 90px;">Estatus del incidente: <span>Activo</span></p>
+            <p>Usuario afectado: <span>Osiris Silva</span></p>
+            <p>No.de ticket: <span>86266189</span></p>
+            <p>Personal Asigando: <span>Marissa Copper</span></p>
+            <p>Fecha del reporte: <span>19/04/2024 4:06:54</span></p>
+            <p style="padding-top: 120px;" >Ultima actualizacion: <span>19/04/2024 4:06:54</span></p>
+        </div>
+        <div id="contenedorFoto">
+            <div id="foto">
+                <p id="descargar">Descargar</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
